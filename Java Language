@@ -1,0 +1,246 @@
+------------------------------
+
+ JAVA LANGUAGE (BY CODE BRO)
+
+-------JDK & IDE--------------
+    To start coding with Java, you'll need two things:
+    1. A Java Development Kit (JDK): It contains a compiler, a compiler will compile your source code, your written code into byte code, which can run on a machine. To Download JDK, search for "jdk download" (can be from the oracle website).
+    2. A Integrated Development Enviroment (IDE): An IDE is a fancy term for a workspace in which we can write code, because sometimes notepad can just not be good enough. To Donwload IDE, search for "intelliJ download".
+
+    IMPORTANT: to run your code, on terminal:
+    1. javac YourFileName.java (This compiles the file into YourFileName.class)
+    2. java YourFileName (This runs the compiled code; do not include the file extension here).
+
+-------Testing the Code-------
+    Testing if the code runs (Output needs to be "Process finished with exit code 0"):
+_________________________________________________
+|public class Main {                             |
+|                                                |
+|    public static void main(String[] args){     |
+|                                                |
+|        System.out.print("I like pizza!");      |
+|    }                                           |
+|}_______________________________________________|
+
+-------How to Print a String-------
+    System.out.print("I like pizza!");
+
+-------Formatting Output (New Text Line)-------
+    1. System.out.print("\n I like pizza!");
+    2. System.out.println("I like pizza!"); (ln means line)
+
+-------How to Add Comments-------
+    1. One Line Comment:
+    // This is my first Java Program
+    2. Multile Line Comment:
+    /*
+    This is a
+    Multi-line
+    Comment
+    */
+
+-------Variables-------
+    Variable: Is a reusable container for a value, it behaves as if it was the value it contains. There is two types of variables:
+    1. Primitive Variables: Simple value stored directly in memory (stack). It can be: int(integer, whole number, like 17), double(a number that includes a decimal, like 3.141), char(characters, like B), boolean(true or false).
+    2. Reference Variables: Is a memory address (stack) that points to the (heap). It can be: string(phrase), array, object.
+
+    When creating a variable, we need to follow 2 steps:
+    1. declaration
+    2. assignment
+
+    Naming Conventions:
+    1. Camel Case: Starts with lowercase (firstName)
+    2. Pascal Case: Starts with uppercase (FirstName)
+    3. Snake Case: Uses underscores (first_name)
+    4. Kebab Case: Uses hyphens (first-name)
+
+
+// Example 1
+   Output: The year is 2025
+____________________________________________________
+|public class Main {                                |
+|                                                   |
+|    public static void main(String[] args){        |
+|                                                   |
+|        int age = 30.5;                            |
+|        int year = 2025;                           |
+|        int quantity = 1.5;                        |
+|                                                   |
+|        System.out.println("The year is " + year); |
+|                                                   |
+|    }                                              |
+|}__________________________________________________|
+
+// Example 2
+   Output: 19.99
+____________________________________________________
+|public class Main {                                |
+|                                                   |
+|    public static void main(String[] args){        |
+|                                                   |
+|        double price = 19.99;                      |
+|        double gpa = 3.5;                          |
+|        double temperature = -12.5                 |
+|                                                   |
+|        System.out.println(price);                 |
+|                                                   |
+|    }                                              |
+|}__________________________________________________|
+
+// Example 3
+   Output: $
+____________________________________________________
+|public class Main {                                |
+|                                                   |
+|    public static void main(String[] args){        |
+|                                                   |
+|        char grade = 'A';                          |
+|        char symbol = '!';                         |
+|        char currency = '$'                        |
+|                                                   |
+|        System.out.println(grade);                 |
+|                                                   |
+|    }                                              |
+|}__________________________________________________|
+
+-------Class Scanner-------
+    The Scanner Class is a versatile utility used for reading and parsing input from various sources, such as the console (System.in), files, or strings. It is part of the java.util package and simplifies the process of obtaining user input and converting it into primitive data types like int, double, and String. For example:
+
+# Example of Scanner: String
+_____________________________________________________
+|import java.util.Scanner;                           |
+|                                                    |
+|public class Main {                                 |
+|    public tatic void main(String[] args) {         |
+|                                                    |
+|        Scanner scanner = new Scanner(System.in);   |
+|                                                    |
+|        System.out.println("Enter your name: ");    |
+|        String name = scanner.nextLine();           |
+|                                                    |
+|        System.out.println("Hello " + name)         |
+|                                                    |
+|        scanner.close();                            |
+|                                                    |
+|    }                                               |
+|}___________________________________________________|
+
+# Example of Scanner: Number
+_____________________________________________________
+|import java.util.Scanner;                           |
+|                                                    |
+|public class Main {                                 |
+|    public tatic void main(String[] args) {         |
+|                                                    |
+|        Scanner scanner = new Scanner(System.in);   |
+|                                                    |
+|        System.out.println("Enter your age: ");     |
+|        String age = scanner.nextInt();             |
+|                                                    |
+|        System.out.println("Your age is " + age)    |
+|                                                    |
+|        scanner.close();                            |
+|                                                    |
+|    }                                               |
+|}___________________________________________________|
+
+# Example of Scanner: Double
+_____________________________________________________
+|import java.util.Scanner;                           |
+|                                                    |
+|public class Main {                                 |
+|    public tatic void main(String[] args) {         |
+|                                                    |
+|        Scanner scanner = new Scanner(System.in);   |
+|                                                    |
+|        System.out.println("Enter your GPA: ");     |
+|        double gpa = scanner.nextInt();             |
+|                                                    |
+|        System.out.println("Your gpa is " + gpa)    |
+|                                                    |
+|        scanner.close();                            |
+|                                                    |
+|    }                                               |
+|}___________________________________________________|
+
+# Example of Scanner: Boolean
+_____________________________________________________
+|import java.util.Scanner;                           |
+|                                                    |
+|public class Main {                                 |
+|    public tatic void main(String[] args) {         |
+|                                                    |
+|        Scanner scanner = new Scanner(System.in);   |
+|                                                    |
+|        System.out.println("Are you a student? (true/false): ");                                          |
+|        boolean isStudent = scanner.nextInt();      |
+|                                                    |
+|        System.out.println("Student " + isStudent)  |
+|                                                    |
+|        scanner.close();                            |
+|                                                    |
+|    }                                               |
+|}___________________________________________________|
+
+        if(isStudent){
+            System.out.println("You are enrolled as a student")
+    }
+    else{
+            System.out.println("You are not enrolled.")
+    }
+
+-------Exercise: Calculate the area of a rectangle-------
+import java.util.Scanner;
+
+public class RectangleArea {
+    public static void main (String[] args) {
+
+        // Calculate area of a rectangle
+        double width;
+        double height;
+        double area;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the width: ");
+        width = scanner.nextDouble();
+
+        System.out.print("Enter the height: ");
+        height = scanner.nextDouble();
+
+        area = width * height;
+
+        System.out.println("The area is: " + area); 
+
+        scanner.close();
+    }
+}
+
+-------Java Arithmetic-------
+
+Operators
+z = x + y;
+z = x - y;
+z = x * y;
+z = x / y;
+z = x % y;
+____________________________________________
+|public static void main(String[] args) {   |
+|                                           |
+|    // Arithmetic Operators                |
+|                                           |
+|    int x = 10;                            |
+|    int y = 2;                             |
+|    int z = x - y                          |
+|                                           |
+|    z = x + y;                             |
+|                                           |
+|    Sytem.out.println(z); //output: 8      |
+|                                           |
+|    }                                      |
+|}__________________________________________|
+
+Order of Operations (PEMDAS)
+3 + 4 * (7 - 5) / 2.0; //output: 7.0
+
+
