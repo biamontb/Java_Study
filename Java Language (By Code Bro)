@@ -172,7 +172,7 @@ _____________________________________________________
 |                                                    |
 |        Scanner scanner = new Scanner(System.in);   |
 |                                                    |
-|        System.out.println("Are you a student? (true/false): ");                                          |
+|        System.out.println("Are you a student? (true/false): ");|
 |        boolean isStudent = scanner.nextInt();      |
 |                                                    |
 |        System.out.println("Student " + isStudent)  |
